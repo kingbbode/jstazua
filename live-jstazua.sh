@@ -21,14 +21,14 @@ fi
 application=$1
 per=$2
 alias=$3
-pid=$(jps | grep '$application' | cut -f1 -d' ')
-
+pid="$(jps | grep "$application" | cut -f1 -d' ')"
+echo "$pid"
 if [[ -z $pid ]]; then
   echo "could't find jps : $application"
   exit 1
 fi
 
-dir=$(date +%m%d%H%M%S)_$alias
+dir=alias_$(date +%m%d%H%M%S)
 
 if [[ -f dir ]]; then
   echo "already exist folder($dir). please try again"

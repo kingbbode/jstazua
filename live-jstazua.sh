@@ -28,7 +28,7 @@ if [[ -z $pid ]]; then
   exit 1
 fi
 
-dir=alias_$(date +%m%d%H%M%S)
+dir=$alias$(date +%m%d%H%M%S)
 
 if [[ -f dir ]]; then
   echo "already exist folder($dir). please try again"

@@ -22,7 +22,6 @@ application=$1
 per=$2
 alias=$3
 pid="$(jps | grep "$application" | cut -f1 -d' ')"
-echo "$pid"
 if [[ -z $pid ]]; then
   echo "could't find jps : $application"
   exit 1

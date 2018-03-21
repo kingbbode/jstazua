@@ -16,7 +16,7 @@
 jstazua [jstack dump file]
 ```
 
-![jstazua](/images/jstzua.png)
+![jstazua](/images/jstazua.png)
 
 - dump 파일을 요약하여 출력.
 

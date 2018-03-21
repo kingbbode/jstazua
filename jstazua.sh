@@ -24,7 +24,7 @@ fi
 
 file=$1
 if [[ -f "$file" ]]; then
-  echo "$file found."
+  echo ""
 else
   echo "$file not found."
   exit 1
@@ -32,12 +32,7 @@ fi
 temp_file=tmp$(date +%m%d%H%M%S).log
 cat $file | grep -Ev 'at java|Native Method|at org.springframework|at sun.reflect|at org.apache|at com.sun|- parking
 to wait for' > $temp_file
-if [[ -f "$temp_file" ]]; then
-  echo "$file found."
-else
-  echo "$temp_file not found."
-  exit 1
-fi
+
 echo "****************************************************"
 echo "**************** JSTACK GAZUA !! *******************"
 echo "****************************************************"
